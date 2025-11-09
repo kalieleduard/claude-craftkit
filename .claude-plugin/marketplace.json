@@ -13,7 +13,7 @@
       "name": "git",
       "description": "git workflow automation with intelligent skills and quick commands for conventional commits and pr creation",
       "source": "./plugins/git",
-      "strict": false,
+      "strict": true,
       "skills": [
         "./plugins/git/skills/git-commit",
         "./plugins/git/skills/git-pr-creation"
@@ -23,7 +23,7 @@
       "name": "engineering",
       "description": "Expert engineering skills for backend development, code quality, Go programming, and testing with Clean Architecture, SOLID principles, and comprehensive testing practices",
       "source": "./plugins/engineering",
-      "strict": false,
+      "strict": true,
       "skills": [
         "./plugins/engineering/backend",
         "./plugins/engineering/code-quality",
