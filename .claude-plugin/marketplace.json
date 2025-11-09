@@ -15,8 +15,8 @@
       "source": "./plugins/git",
       "strict": true,
       "skills": [
-        "./plugins/git/skills/git-commit",
-        "./plugins/git/skills/git-pr-creation"
+        "./skills/git-commit",
+        "./skills/git-pr-creation"
       ]
     },
     {
@@ -25,10 +25,10 @@
       "source": "./plugins/engineering",
       "strict": true,
       "skills": [
-        "./plugins/engineering/backend",
-        "./plugins/engineering/code-quality",
-        "./plugins/engineering/golang-engineer",
-        "./plugins/engineering/golang-testing"
+        "./backend",
+        "./code-quality",
+        "./golang-engineer",
+        "./golang-testing"
       ]
     }
   ]
