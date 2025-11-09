@@ -1,0 +1,25 @@
+{
+  "name": "engineering",
+  "version": "1.0.0",
+  "description": "Expert engineering skills for backend development, code quality, Go programming, and testing with Clean Architecture, SOLID principles, and comprehensive testing practices",
+  "author": {
+    "name": "Kaliel Eduard",
+    "email": "kalieleduard1@gmail.com"
+  },
+  "keywords": [
+    "backend",
+    "golang",
+    "go",
+    "clean-architecture",
+    "solid",
+    "code-quality",
+    "testing",
+    "testify",
+    "clean-code",
+    "design-patterns",
+    "engineering",
+    "best-practices"
+  ],
+  "license": "MIT"
+}
+
