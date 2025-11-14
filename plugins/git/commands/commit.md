@@ -1,15 +1,64 @@
 ---
-description: Quick commit command - stages changes and creates commit with conventional commit format
+name: commit
+description: Creates a git commit with conventional commit message by analyzing code changes
 ---
 
-Create a git commit by delegating to the git-commit-agent.
+# Git Commit Command
 
-Use the Task tool to invoke the git-commit-agent:
+Delegates to: `@git-commit-agent`
 
+## Usage
+
+```bash
+/git:commit
 ```
-subagent_type: general-purpose
-description: Create git commit
-prompt: Use the git-commit-agent from plugins/git/agents/git-commit-agent.md to create a conventional commit. Analyze changes, stage files, and create the commit. Report the commit message and status.
+
+## What it does
+
+1. Analyzes staged and unstaged changes
+2. Generates conventional commit message
+3. Stages relevant files if needed
+4. Creates the commit
+5. Verifies success
+
+## Commit Message Format
+
+Follows Conventional Commits specification:
+```
+<type>(<scope>): <subject>
 ```
 
-The agent will handle the entire commit process automatically.
+**Types**: feat, fix, docs, style, refactor, perf, test, chore, ci, build
+
+**Rules**:
+- Use imperative mood ("add" not "added")
+- Don't capitalize first letter
+- No period at end
+- Max 72 characters
+
+## Examples
+
+```bash
+# After making changes
+/git:commit
+
+# Agent analyzes and creates:
+# feat(auth): add JWT authentication
+# fix(api): handle null user ID in session
+# refactor(db): extract query builders to utilities
+```
+
+## Safety
+
+- **NEVER commits to main or dev directly** - agent checks branch first
+- **Atomic commits** - one logical change per commit
+- **Working state** - every commit leaves code in working state
+
+## Agent Details
+
+This command delegates to `git-commit-agent` which:
+- Runs on Claude Haiku for fast execution
+- Analyzes diffs automatically
+- Generates appropriate commit messages
+- Handles staging automatically
+
