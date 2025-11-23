@@ -2,7 +2,7 @@
 
 <task_context>
 <domain>engine/infra/[subdomain]</domain>
-<type>implementation|integration|testing|documentation</type>
+<type>backend|frontend</type>
 <scope>core_feature|middleware|configuration|performance</scope>
 <complexity>low|medium|high</complexity>
 <dependencies>external_apis|database|temporal|http_server</dependencies>
